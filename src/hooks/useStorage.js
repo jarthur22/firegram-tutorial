@@ -11,7 +11,7 @@ const useStorage = (file) => {
         //references
         const storageRef = projectStorage.ref(file.name);
         const collectionRef = projectFirestore.collection('images');
-
+ 
         //put request to database
         storageRef.put(file).on('state_changed', (snap) => {
             //set progress bar percentage
